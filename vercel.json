@@ -1,13 +1,7 @@
 {
   "functions": {
     "api/**/*.js": {
-      "runtime": "@vercel/node@20"
+      "runtime": "nodejs18.x"
     }
-  },
-  "rewrites": [
-    {
-      "source": "/((?!api/.*).*)",
-      "destination": "/client/build/index.html"
-    }
-  ]
+  }
 }
