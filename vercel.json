@@ -1,9 +1,13 @@
 {
-  "buildCommand": "cd client && npm run build",
-  "outputDirectory": "client/build",
   "functions": {
     "api/**/*.js": {
-      "runtime": "nodejs18.x"
+      "runtime": "@vercel/node@20"
     }
-  }
+  },
+  "rewrites": [
+    {
+      "source": "/((?!api/.*).*)",
+      "destination": "/client/build/index.html"
+    }
+  ]
 }
